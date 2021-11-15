@@ -54,7 +54,7 @@ ENV = bool(os.environ.get("ENV", False))
 if ENV:
     TOKEN = os.environ.get("TOKEN", None)
     try:
-        OWNER_ID = os.environ.get("OWNER_ID", None)
+        OWNER_ID = int(os.environ.get("OWNER_ID", None))
     except ValueError:
         raise Exception("[Zeldris] Your OWNER_ID env variable is not a valid integer.")
 
