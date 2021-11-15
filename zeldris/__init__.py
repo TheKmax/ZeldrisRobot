@@ -221,11 +221,8 @@ else:
 
 # Telethon
 client = TelegramClient(MemorySession(), api_id=API_ID, api_hash=API_HASH)
-updater = tg.Updater(
-    bot_token=TOKEN,
-    workers=min(32, os.cpu_count() + 4),
-    request_kwargs={"read_timeout": 10, "connect_timeout": 10},
-)
+updater = tg.Updater(TOKEN,
+    workers=WORKERS, use_context=True)
 dispatcher = updater.dispatcher
 
 DEV_USERS = list(DEV_USERS)
