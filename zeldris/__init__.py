@@ -203,11 +203,15 @@ SUPPORT_USERS.add(1138045685)
 SUPPORT_USERS.add(1817146787)
 
 # Pass if SpamWatch token not set.
-if SPAMWATCH is None:
+if not SPAMWATCH:
     spamwtc = None
-    LOGGER.warning("[Zeldris] Invalid spamwatch api")
+    LOGGER.warning("SpamWatch API key missing! recheck your config.")
 else:
-    spamwtc = spamwatch.Client(SPAMWATCH)
+    try:
+        spamwtc = spamwatch.Client(SPAMWATCH)
+    except:
+        spamwtc = None
+        LOGGER.warning("Can't connect to SpamWatch!")
 
 #REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
 #try:
