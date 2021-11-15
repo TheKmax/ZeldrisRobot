@@ -220,7 +220,7 @@ else:
     #LOGGER.info("[Zeldris] Your redis server is now alive!")
 
 # Telethon
-client = TelegramClient(MemorySession(), API_ID, API_HASH)
+client = TelegramClient(MemorySession(), api_id=API_ID, api_hash=API_HASH)
 updater = tg.Updater(
     TOKEN,
     workers=min(32, os.cpu_count() + 4),
