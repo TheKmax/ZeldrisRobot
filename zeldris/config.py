@@ -5,8 +5,8 @@ class Config(object):
     TOKEN = ""  # Take from @BotFather
     OWNER_ID = 1234567890  # If you dont know, run the bot and do /id in your private chat with it
     OWNER_USERNAME = ""
-    API_HASH = None  # for purge stuffs
-    API_ID = None
+    API_HASH = "kmax"  # for purge stuffs
+    API_ID = 123456
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "sqldbtype://username:pw@hostname:port/db_name"  # needed for any database modules
