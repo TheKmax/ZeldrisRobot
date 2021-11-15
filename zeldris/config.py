@@ -4,10 +4,10 @@ class Config(object):
     # REQUIRED
     TOKEN = "TOKEN"  # Take from @BotFather
     OWNER_ID = 1234567890  # If you dont know, run the bot and do /id in your private chat with it
-    OWNER_USERNAME = ""
+    OWNER_USERNAME = "Kmax_01"
     API_HASH = "kmax"  # for purge stuffs
     API_ID = 123456
-
+    WORKERS = ( 8 )
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "sqldbtype://username:pw@hostname:port/db_name"  # needed for any database modules
     MESSAGE_DUMP = None  # needed to make sure 'save from' messages persist
@@ -35,12 +35,12 @@ class Config(object):
     DEL_CMDS = False  # Whether or not you should delete "blue text must click" commands
     STRICT_GBAN = True
     WORKERS = 8  # Number of subthreads to use. This is the recommended amount - see for yourself what works best!
-    BAN_STICKER = None  # banhammer marie sticker
+    BAN_STICKER = "CAACAgIAAxkBAAIaDmEGNm7RWLf4T8lmO_F-e_ZRERIlAAJQBwACRvusBIwUzzDf7E-yIAQ"  # banhammer marie sticker
     ALLOW_EXCL = False  # DEPRECATED, USE BELOW INSTEAD! Allow ! commands as well as /
     CUSTOM_CMD = False  # Set to ('/', '!') or whatever to enable it, like ALLOW_EXCL but with more custom handler!
-    API_OPENWEATHER = None  # OpenWeather API
-    SPAMWATCH_API = None  # Your SpamWatch token
-    WALL_API = None
+    API_OPENWEATHER = "kmax"  # OpenWeather API
+    SPAMWATCH_API = "kmax"  # Your SpamWatch token
+    WALL_API = "kmax"
     SPAMMERS = []
 
 class Production(Config):
