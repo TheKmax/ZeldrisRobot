@@ -22,7 +22,7 @@ import time
 
 import spamwatch
 import telegram.ext as tg
-from redis import StrictRedis
+#from redis import StrictRedis
 from telethon import TelegramClient
 from telethon.sessions import MemorySession
 
@@ -106,7 +106,7 @@ if ENV:
     CERT_PATH = os.environ.get("CERT_PATH")
 
     DB_URI = os.environ.get("DATABASE_URL")
-    REDIS_URL = os.environ.get("REDIS_URL")
+    #REDIS_URL = os.environ.get("REDIS_URL")
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
@@ -175,7 +175,7 @@ else:
     CERT_PATH = Config.CERT_PATH
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
-    REDIS_URL = Config.REDIS_URL
+    #REDIS_URL = Config.REDIS_URL
     DONATION_LINK = Config.DONATION_LINK
     LOAD = Config.LOAD
     NO_LOAD = Config.NO_LOAD
@@ -209,15 +209,15 @@ if SPAMWATCH is None:
 else:
     spamwtc = spamwatch.Client(SPAMWATCH)
 
-REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
-try:
-    REDIS.ping()
-    LOGGER.info("[Zeldris] Your redis server is now alive!")
-except BaseException:
-    raise Exception("[Zeldris] Your redis server is not alive, please check again.")
-finally:
-    REDIS.ping()
-    LOGGER.info("[Zeldris] Your redis server is now alive!")
+#REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+#try:
+    #REDIS.ping()
+    #LOGGER.info("[Zeldris] Your redis server is now alive!")
+#except BaseException:
+    #raise Exception("[Zeldris] Your redis server is not alive, please check again.")
+#finally:
+    #REDIS.ping()
+    #LOGGER.info("[Zeldris] Your redis server is now alive!")
 
 # Telethon
 client = TelegramClient(MemorySession(), API_ID, API_HASH)
