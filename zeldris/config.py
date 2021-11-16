@@ -2,7 +2,7 @@ class Config(object):
     LOGGER = True
 
     # REQUIRED
-    TOKEN = "TOKEN"  # Take from @BotFather
+    TOKEN = "2037324684:AAEqb4l6DnNydfKhhXLu82Y5PR9AyeT-11A"  # Take from @BotFather
     OWNER_ID = 1234567890  # If you dont know, run the bot and do /id in your private chat with it
     OWNER_USERNAME = "Kmax_01"
     API_HASH = "kmax"  # for purge stuffs
