@@ -22,6 +22,7 @@ import time
 
 import spamwatch
 import telegram.ext as tg
+from telegram.ext import Updater
 #from redis import StrictRedis
 from telethon import TelegramClient
 from telethon.sessions import MemorySession
@@ -225,7 +226,7 @@ else:
 
 # Telethon
 client = TelegramClient(MemorySession(), api_id=API_ID, api_hash=API_HASH)
-updater = tg.Updater(TOKEN,
+updater = tg.Updater(token=TOKEN,
     workers=WORKERS, use_context=True)
 dispatcher = updater.dispatcher
 
